@@ -1,16 +1,17 @@
 import { Header } from "@/components/Form/Header";
+import { Pagination } from "@/components/Form/Pagination";
 import { Sidebar } from "@/components/Form/Sidebar";
 import {
   Box,
   Button,
   Checkbox,
-  Text,
   Flex,
   Heading,
   Icon,
   Table,
   Tbody,
   Td,
+  Text,
   Th,
   Thead,
   Tr,
@@ -234,6 +235,8 @@ export default function UserList() {
               </Tr>
             </Tbody>
           </Table>
+
+        <Pagination/>
         </Box>
       </Flex>
     </Box>
