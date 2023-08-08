@@ -1,6 +1,3 @@
-import { Header } from "@/components/Form/Header";
-import { Pagination } from "@/components/Form/Pagination";
-import { Sidebar } from "@/components/Form/Sidebar";
 import {
   Box,
   Button,
@@ -14,9 +11,12 @@ import {
   Text,
   Th,
   Thead,
-  Tr,
+  Tr
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
+import { Header } from "../../components/Header";
+import { Pagination } from "../../components/Pagination";
+import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
   return (
@@ -236,7 +236,7 @@ export default function UserList() {
             </Tbody>
           </Table>
 
-        <Pagination/>
+          <Pagination />
         </Box>
       </Flex>
     </Box>
