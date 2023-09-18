@@ -1013,6 +1013,11 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.44.0.tgz"
   "version" "8.44.0"
 
+"@faker-js/faker@^8.0.2":
+  "integrity" "sha512-Uo3pGspElQW91PCvKSIAXoEgAUlRnH29sX2/p89kg7sP1m2PzCufHINd0FhTXQf6DYGiUlVncdSPa2F9wxed2A=="
+  "resolved" "https://registry.npmjs.org/@faker-js/faker/-/faker-8.0.2.tgz"
+  "version" "8.0.2"
+
 "@hookform/resolvers@^3.3.1":
   "integrity" "sha512-K7KCKRKjymxIB90nHDQ7b9nli474ru99ZbqxiqDAWYsYhOsU3/4qLxW91y+1n04ic13ajjZ66L3aXbNef8PELQ=="
   "resolved" "https://registry.npmjs.org/@hookform/resolvers/-/resolvers-3.3.1.tgz"
