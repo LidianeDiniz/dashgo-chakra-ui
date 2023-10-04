@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { Factory, Model, createServer } from 'miragejs';
+import { Factory, Model, Response, createServer } from 'miragejs';
 type User ={
     name: string;
     email: string;
@@ -34,7 +34,22 @@ export function makeServer (){
             this.namespace ='api';
             this.timing = 750;
 
-            this.get('/users')
+            this.get('/users', function(schema, request){
+                const {page = 1 , per_page = 10} = request.queryParams
+                const total = schema.all('user').length
+
+                const pageSatrt = (Number(page) - 1 ) * Number(per_page)
+                const pageEnd = pageSatrt + Number(per_page)
+
+                const users = this.serialize(schema.all('user')).users.slice(pageSatrt, pageEnd)
+
+                return new Response (
+                    200,
+                    {'x-total-count': String(total)},
+                    {users}
+                )
+
+            })
             this.post('/users')
 
             this.namespace = '';
